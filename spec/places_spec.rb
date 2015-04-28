@@ -2,6 +2,9 @@ require('rspec')
 require('places')
 
 describe(Place) do
+  before() do
+    Place.clear()
+  end
   describe('#description') do
     it("lets you give it a description") do
     test_place = Place.new("England")
@@ -27,5 +30,4 @@ describe(Place) do
       expect(Place.all()).to(eq([]))
     end
   end
-
 end

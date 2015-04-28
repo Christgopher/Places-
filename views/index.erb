@@ -1,0 +1,14 @@
+<h1>Here are your places!</h1>
+
+<ul>
+  <% @places.each() do |place| %>
+    <li><%= place.description() %></li>
+  <% end %>
+</ul>
+
+<form action="/places" method="post">
+  <label for="description">Enter your place here!</label>
+  <input id="description" name="description" type="text">
+
+  <button type="submit">Add place</button>
+</form>
